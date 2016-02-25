@@ -134,7 +134,7 @@
                                 </div>
                             </form>
 
-
+                            <table id="example" width="100%"></table>
 
                         </div>
 

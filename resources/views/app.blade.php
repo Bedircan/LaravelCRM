@@ -28,6 +28,8 @@
     <link href="{{Request::root()}}/css/customstyle.css" rel="stylesheet">
     <link href="{{Request::root()}}/css/style-responsive.css" rel="stylesheet"/>
 
+    <link href="{{Request::root()}}/css/jquery.dataTables.min.css" rel="stylesheet"/>
+
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -285,9 +287,8 @@
     <!--main content end-->
 </section>
 
-<!-- js placed at the end of the document so the pages load faster -->
-
 <script src="{{Request::root()}}/js/jquery.js"></script>
+<script src="{{Request::root()}}/js/jquery-1.12.0.min.js"></script>
 <script src="{{Request::root()}}/js/jquery-ui-1.9.2.custom.min.js"></script>
 <script src="{{Request::root()}}/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="{{Request::root()}}/js/bootstrap.min.js"></script>
@@ -295,6 +296,7 @@
 <script src="{{Request::root()}}/js/jquery.scrollTo.min.js"></script>
 <script src="{{Request::root()}}/js/jquery.nicescroll.js" type="text/javascript"></script>
 <script src="{{Request::root()}}/js/respond.min.js"></script>
+
 
 <!--right slidebar-->
 <script src="{{Request::root()}}/js/slidebars.min.js"></script>
@@ -304,26 +306,66 @@
 <!--common script for all pages-->
 <script src="{{Request::root()}}/js/common-scripts.js"></script>
 
+
+<script src="{{Request::root()}}/js/jquery.dataTables.min.js"></script>
 <script>
+    var dataSet = [
+        [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25"],
+        [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25"],
+        [ "Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12"],
+        [ "Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "6224", "2012/03/29"],
+        [ "Airi Satou", "Accountant", "Tokyo", "5407", "2008/11/28"],
+        [ "Brielle Williamson", "Integration Specialist", "New York", "4804", "2012/12/02",],
+        [ "Herrod Chandler", "Sales Assistant", "San Francisco", "9608", "2012/08/06"],
+        [ "Rhona Davidson", "Integration Specialist", "Tokyo", "6200", "2010/10/14"],
+        [ "Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009/09/15"],
+        [ "Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13"],
+        [ "Jena Gaines", "Office Manager", "London", "3814", "2008/12/19"],
+        [ "Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03"],
+        [ "Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16"],
+        [ "Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012/12/18"],
+        [ "Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010/03/17"],
+        [ "Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09"]
+    ];
 
-    //owl carousel
+    $(document).ready(function() {
 
-    $(document).ready(function () {
-        $("#owl-demo").owlCarousel({
-            navigation: true,
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            autoPlay: true
 
-        });
-    });
 
-    //custom select box
+        $('#example').DataTable( {
+            data: dataSet,
+            columns: [
+                { title: "Müşteri Kısa Adı" },
+                { title: "Müşteri Ünvanı" },
+                { title: "Durumu" },
+                { title: "Sektörü." },
+                { title: "Tipi" },
+                {title:'İşlemler'}
+            ],
+            "columnDefs": [
+                {
+                    "data": null,
+                    "defaultContent": "<button class='btn btn-primary btn-xs'><i class='fa fa-pencil'> Güncelle</i></button><button class='btn btn-danger btn-xs'><i class='fa fa-trash-o '>Sil</i></button>",
+                    "targets": -1
+                }
+            ],
+            "language": {
+                "lengthMenu": ' <select>'+
+                '<option value="10">10</option>'+
+                '<option value="30">30</option>'+
+                '<option value="50">50</option>'+
+                '<option value="100">100</option>'+
+                '<option value="200">200</option>'+
+                '<option value="500">500</option>'+
+                '<option value="1000">1000</option>'+
+                '<option value="-1">All</option>'+
+                '</select> Kayıt Görüntüle',
+                "sInfo": "Toplam \_TOTAL\_ sonuç arasından \_START\_ ile \_END\_ arasındaki sonuçlar gösteriliyor."
+            },
 
-    $(function () {
-        $('select.styled').customSelect();
-    });
+        } );
+    } );
+
 
 </script>
 
