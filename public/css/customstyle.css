@@ -1,0 +1,42 @@
+.width-150{
+    width:150px;
+}
+
+.width-200{
+    width:200px;
+}
+
+.width-300{
+    width:300px;
+}
+
+.right{
+    float: right;
+}
+
+.btn-add-margin-left{
+    margin-left: 50%;
+    width: 50%;
+}
+
+.btn-center{
+    align-self: center;
+}
+
+.custom-label{
+    color: #002a80;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.btn-success-green{
+    background-color: #78CD51;
+}
+.tab-bg-dark-navy-grey {
+    background: #00a8b3;
+}
+
+
+
+
+
+

@@ -28,9 +28,6 @@
     <link href="{{Request::root()}}/css/customstyle.css" rel="stylesheet">
     <link href="{{Request::root()}}/css/style-responsive.css" rel="stylesheet"/>
 
-    <link href="assets/advanced-datatable/media/css/demo_page.css" rel="stylesheet"/>
-    <link href="assets/advanced-datatable/media/css/demo_table.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/data-tables/DT_bootstrap.css"/>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -297,16 +294,11 @@
 <script class="include" type="text/javascript" src="{{Request::root()}}/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="{{Request::root()}}/js/jquery.scrollTo.min.js"></script>
 <script src="{{Request::root()}}/js/jquery.nicescroll.js" type="text/javascript"></script>
-<script type="text/javascript" language="javascript"
-        src="{{Request::root()}}/assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="{{Request::root()}}/assets/data-tables/DT_bootstrap.js"></script>
 <script src="{{Request::root()}}/js/respond.min.js"></script>
 
 <!--right slidebar-->
 <script src="{{Request::root()}}/js/slidebars.min.js"></script>
 
-<!--dynamic table initialization -->
-<script src="{{Request::root()}}/js/dynamic_table_init.js"></script>
 
 
 <!--common script for all pages-->
